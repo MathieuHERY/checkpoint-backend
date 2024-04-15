@@ -26,7 +26,7 @@ import {
     emoji!: string;
 
     @Column({nullable:true})
-    @Field()
+    @Field({ nullable: true })
     continent!: string;
   }
   
@@ -38,7 +38,7 @@ import {
     name!: string;
     @Field()
     emoji!: string;
-    @Field()
+    @Field({ nullable: true })
     continent!: string;
   }
   
