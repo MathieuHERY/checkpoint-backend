@@ -23,10 +23,10 @@ export class CountryResolver {
     }
   }
 
-  @Query(() => [Country], { nullable: true })
+  @Query(() => [Country])
   async getCountriesByContinent(
     @Arg("continent") continent: string
-  ): Promise<Country[] | null> {
+  ): Promise<Country[]> {
     try {
       const data = await Country.find({
         where: {
